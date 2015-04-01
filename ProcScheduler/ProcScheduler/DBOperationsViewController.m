@@ -7,6 +7,8 @@
 //
 
 #import "DBOperationsViewController.h"
+#import "Model.h"
+#import "ServerViewController.h"
 
 @interface DBOperationsViewController ()
 
@@ -23,6 +25,44 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)FileUpload:(id)sender{
+
+
+    
+    
+
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"ServerName", nil];
+    NSArray *objects = [NSArray arrayWithObjects:@"server 3", nil];
+    NSDictionary *Upload = [NSDictionary dictionaryWithObjects:objects
+                                                           forKeys:keys];
+    
+    [Model insertObjectWithTable:@"Servers" values:Upload completion:^(BOOL responseBool, NSError *responseError, NSString *object) {
+    
+        if (responseError == nil) {
+            
+    
+    
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"SUCCESS"
+                                                                           message:@"file added"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        
+    }];
+    
+    
+   
+    
+
+
+}
+
 
 /*
 #pragma mark - Navigation

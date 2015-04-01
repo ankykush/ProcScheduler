@@ -2,7 +2,7 @@
 //  Model.m
 //  ProcScheduler
 //
-//  Created by Ankush Jain on 29/03/15.
+//  Created by vynu badri on 29/03/15.
 //  Copyright (c) 2015 SecureAppTech. All rights reserved.
 //
 

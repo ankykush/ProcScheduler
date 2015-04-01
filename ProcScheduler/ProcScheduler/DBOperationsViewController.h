@@ -11,5 +11,6 @@
 @interface DBOperationsViewController : UIViewController
 @property(nonatomic,strong) NSString *selectedServer;
 @property (weak, nonatomic) IBOutlet UILabel *selectedServerLbl;
+- (IBAction)FileUpload:(id)sender;
 
 @end
