@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0A8BFE1ACA656200E06E28 /* TableCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0A8BFD1ACA656200E06E28 /* TableCopyViewController.m */; };
 		1B75FC5D1AC878E700C8F567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B75FC5C1AC878E700C8F567 /* main.m */; };
 		1B75FC601AC878E700C8F567 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B75FC5F1AC878E700C8F567 /* AppDelegate.m */; };
 		1B75FC661AC878E700C8F567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75FC641AC878E700C8F567 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0A8BFC1ACA656200E06E28 /* TableCopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCopyViewController.h; sourceTree = "<group>"; };
+		1B0A8BFD1ACA656200E06E28 /* TableCopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCopyViewController.m; sourceTree = "<group>"; };
 		1B75FC571AC878E700C8F567 /* ProcScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75FC5B1AC878E700C8F567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B75FC5C1AC878E700C8F567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				1B75FCBB1AC8944600C8F567 /* DBOperationsViewController.m */,
 				1B75FCAE1AC8807900C8F567 /* Model.h */,
 				1B75FCAF1AC8807900C8F567 /* Model.m */,
+				1B0A8BFC1ACA656200E06E28 /* TableCopyViewController.h */,
+				1B0A8BFD1ACA656200E06E28 /* TableCopyViewController.m */,
 				1B75FC641AC878E700C8F567 /* Main.storyboard */,
 				1B75FC671AC878E700C8F567 /* Images.xcassets */,
 				1B75FC691AC878E700C8F567 /* LaunchScreen.xib */,
@@ -349,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0A8BFE1ACA656200E06E28 /* TableCopyViewController.m in Sources */,
 				1B75FCBC1AC8944600C8F567 /* DBOperationsViewController.m in Sources */,
 				1B75FCAD1AC87FF300C8F567 /* LoginViewController.m in Sources */,
 				1B75FC601AC878E700C8F567 /* AppDelegate.m in Sources */,
@@ -555,6 +561,7 @@
 				1B75FC7C1AC878E700C8F567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B75FC7D1AC878E700C8F567 /* Build configuration list for PBXNativeTarget "ProcSchedulerTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +570,7 @@
 				1B75FC7F1AC878E700C8F567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
