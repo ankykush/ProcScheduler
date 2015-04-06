@@ -40,6 +40,9 @@
 		1B75FCB61AC888F400C8F567 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B75FCB51AC888F400C8F567 /* ScheduleViewController.m */; };
 		1B75FCB91AC889CB00C8F567 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B75FCB81AC889CB00C8F567 /* ServerViewController.m */; };
 		1B75FCBC1AC8944600C8F567 /* DBOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B75FCBB1AC8944600C8F567 /* DBOperationsViewController.m */; };
+		B0B9361F1AD20C50005654C5 /* UploadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B9361E1AD20C50005654C5 /* UploadImageController.m */; };
+		B0B936221AD234A4005654C5 /* FileNamesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B936211AD234A4005654C5 /* FileNamesController.m */; };
+		B0B936251AD23B0B005654C5 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B936241AD23B0B005654C5 /* DataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,12 @@
 		1B75FCB81AC889CB00C8F567 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
 		1B75FCBA1AC8944500C8F567 /* DBOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOperationsViewController.h; sourceTree = "<group>"; };
 		1B75FCBB1AC8944600C8F567 /* DBOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOperationsViewController.m; sourceTree = "<group>"; };
+		B0B9361D1AD20C50005654C5 /* UploadImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageController.h; sourceTree = "<group>"; };
+		B0B9361E1AD20C50005654C5 /* UploadImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageController.m; sourceTree = "<group>"; };
+		B0B936201AD234A4005654C5 /* FileNamesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileNamesController.h; sourceTree = "<group>"; };
+		B0B936211AD234A4005654C5 /* FileNamesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileNamesController.m; sourceTree = "<group>"; };
+		B0B936231AD23B0B005654C5 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		B0B936241AD23B0B005654C5 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +185,12 @@
 				1B75FCAF1AC8807900C8F567 /* Model.m */,
 				1B0A8BFC1ACA656200E06E28 /* TableCopyViewController.h */,
 				1B0A8BFD1ACA656200E06E28 /* TableCopyViewController.m */,
+				B0B9361D1AD20C50005654C5 /* UploadImageController.h */,
+				B0B9361E1AD20C50005654C5 /* UploadImageController.m */,
+				B0B936201AD234A4005654C5 /* FileNamesController.h */,
+				B0B936211AD234A4005654C5 /* FileNamesController.m */,
+				B0B936231AD23B0B005654C5 /* DataController.h */,
+				B0B936241AD23B0B005654C5 /* DataController.m */,
 				1B75FC641AC878E700C8F567 /* Main.storyboard */,
 				1B75FC671AC878E700C8F567 /* Images.xcassets */,
 				1B75FC691AC878E700C8F567 /* LaunchScreen.xib */,
@@ -354,9 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B9361F1AD20C50005654C5 /* UploadImageController.m in Sources */,
 				1B0A8BFE1ACA656200E06E28 /* TableCopyViewController.m in Sources */,
 				1B75FCBC1AC8944600C8F567 /* DBOperationsViewController.m in Sources */,
+				B0B936221AD234A4005654C5 /* FileNamesController.m in Sources */,
 				1B75FCAD1AC87FF300C8F567 /* LoginViewController.m in Sources */,
+				B0B936251AD23B0B005654C5 /* DataController.m in Sources */,
 				1B75FC601AC878E700C8F567 /* AppDelegate.m in Sources */,
 				1B75FC5D1AC878E700C8F567 /* main.m in Sources */,
 				1B75FCB31AC8887000C8F567 /* MainMenuViewController.m in Sources */,

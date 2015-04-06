@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "DataController.h"
 
 typedef void (^CompletionWithBoolBlock) (BOOL responseBool, NSError *responseError, NSString *object);
 typedef void (^CompletionWithArrayBlock) (NSArray *responseArray, NSError *responseError, NSString *object);

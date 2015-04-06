@@ -59,6 +59,7 @@
 {
     self.selectedServer = self.availableServersArr[indexPath.row];
     [self performSegueWithIdentifier:@"showDBOperations" sender:self];
+    [[DataController sharedController] setSelectedServer:self.selectedServer];
 }
 
  #pragma mark - Navigation

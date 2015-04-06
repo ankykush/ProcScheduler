@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBOperationsViewController : UIViewController
+@interface DBOperationsViewController : UIViewController<UIImagePickerControllerDelegate>
 @property(nonatomic,strong) NSString *selectedServer;
 @property (weak, nonatomic) IBOutlet UILabel *selectedServerLbl;
 - (IBAction)FileUpload:(id)sender;
+- (IBAction)FileDownload:(id)sender;
 
 @end
