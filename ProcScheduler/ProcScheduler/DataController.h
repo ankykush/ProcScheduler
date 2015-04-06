@@ -14,4 +14,7 @@
 
 +(DataController *)sharedController;
 
+-(BOOL)fileExistAtDocumentPath:(NSString *)fileName;
+
+-(NSString *)filePathWithName:(NSString *)fileName;
 @end

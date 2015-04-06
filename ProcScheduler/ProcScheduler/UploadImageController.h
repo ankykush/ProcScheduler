@@ -10,4 +10,5 @@
 
 @interface UploadImageController : UIViewController<UITextFieldDelegate>
 @property (nonatomic,strong) UIImage *imageToBeUploaded;
+@property (nonatomic,strong) NSString *action,*fileName;
 @end

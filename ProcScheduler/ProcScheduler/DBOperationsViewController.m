@@ -67,7 +67,7 @@
 
 - (IBAction)FileDownload:(id)sender {
     
-    
+    [self performSegueWithIdentifier:@"fileNames" sender:self];
     
 }
 
@@ -91,6 +91,7 @@
     {
         UploadImageController *uploadController = segue.destinationViewController;
         uploadController.imageToBeUploaded = self.selectedImage;
+        uploadController.action = @"Upload";
     }
 }
 

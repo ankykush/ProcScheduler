@@ -23,9 +23,11 @@
     [self.uploadView setContentMode:UIViewContentModeScaleAspectFit];
     [self.uploadView setImage:self.imageToBeUploaded];
     
-    UIBarButtonItem *uploadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(UploadClicked:)];
-    [uploadButton setTitle:@"Upload"];
-    self.navigationItem.rightBarButtonItem = uploadButton;
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:self.action
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(UploadClicked:)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
     // Do any additional setup after loading the view.
 }
 
@@ -34,23 +36,42 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)UploadClicked:(id)sender {
-    _alertController = [UIAlertController alertControllerWithTitle:nil message:@"Enter File Name" preferredStyle:UIAlertControllerStyleAlert];
+    UIBarButtonItem *btn = (UIBarButtonItem *)sender;
     
-    __weak UploadImageController *controller = self;
-    [_alertController addTextFieldWithConfigurationHandler:^(UITextField *fileTitle){
+    if([btn.title isEqualToString:@"Upload"]){
+        _alertController = [UIAlertController alertControllerWithTitle:nil message:@"Enter File Name" preferredStyle:UIAlertControllerStyleAlert];
+        
+        __weak UploadImageController *controller = self;
+        [_alertController addTextFieldWithConfigurationHandler:^(UITextField *fileTitle){
+            
+            fileTitle.placeholder = @"File Name";
+            [fileTitle setDelegate:controller];
+        }];
+        
+        _okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            NSString *name = ((UITextField *)_alertController.textFields[0]).text;
+            [self uploadFileWithName:name];
+        }];
+        [_okAction setEnabled:NO];
+        [_alertController addAction:_okAction];
+        
+        [self presentViewController:_alertController animated:YES completion:nil];
+    }
+    else{
        
-        fileTitle.placeholder = @"File Name";
-        [fileTitle setDelegate:controller];
-    }];
-    
-    _okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        NSString *name = ((UITextField *)_alertController.textFields[0]).text;
-        [self uploadFileWithName:name];
-    }];
-    [_okAction setEnabled:NO];
-    [_alertController addAction:_okAction];
-    
-    [self presentViewController:_alertController animated:YES completion:nil];
+        if([[DataController sharedController] fileExistAtDocumentPath:[NSString stringWithFormat:@"%@.jpg",_fileName]]){
+            
+            [[[UIAlertView alloc] initWithTitle:@"Download File" message:@"File already downloaded" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+        }
+        else{
+            [UIImageJPEGRepresentation(_imageToBeUploaded, 0.8) writeToFile:[[DataController sharedController] filePathWithName:_fileName] atomically:YES];
+           
+            [[[UIAlertView alloc] initWithTitle:@"Download File" message:@"File downloaded successfully" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+
+        }
+        
+        
+    }
 }
 
 -(void)uploadFileWithName:(NSString *)fileName{

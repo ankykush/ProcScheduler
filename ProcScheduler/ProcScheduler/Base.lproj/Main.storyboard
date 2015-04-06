@@ -211,7 +211,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-GY-aZx">
                                 <rect key="frame" x="16" y="476" width="343" height="30"/>
-                                <state key="normal" title="Data Backup">
+                                <state key="normal" title="Downloaded Files">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -222,7 +222,7 @@
                     <connections>
                         <outlet property="selectedServerLbl" destination="vR6-Mg-ROF" id="nPG-mA-3nG"/>
                         <segue destination="au5-dc-3nU" kind="show" identifier="uploadImage" id="euD-m1-VCG"/>
-                        <segue destination="4O8-zP-aFh" kind="show" id="fC0-sC-qwi"/>
+                        <segue destination="4O8-zP-aFh" kind="show" identifier="fileNames" id="fC0-sC-qwi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ra-J3-Wpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="3172.5" y="-89.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--File Names Controller-->
         <scene sceneID="aq7-IX-SUQ">
             <objects>
-                <tableViewController id="4O8-zP-aFh" sceneMemberID="viewController">
+                <tableViewController id="4O8-zP-aFh" customClass="FileNamesController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EPW-rv-0s7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,6 +283,9 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="au5-dc-3nU" kind="show" identifier="downloadImage" id="Pgg-jY-v2J"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oez-gU-eK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,4 +310,7 @@
             <point key="canvasLocation" x="-201" y="-131"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pgg-jY-v2J"/>
+    </inferredMetricsTieBreakers>
 </document>
