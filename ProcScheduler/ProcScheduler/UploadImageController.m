@@ -23,11 +23,14 @@
     [self.uploadView setContentMode:UIViewContentModeScaleAspectFit];
     [self.uploadView setImage:self.imageToBeUploaded];
     
-    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:self.action
-                                                                     style:UIBarButtonItemStylePlain
-                                                                    target:self
-                                                                    action:@selector(UploadClicked:)];
-    self.navigationItem.rightBarButtonItem = rightBarItem;
+    if([self.action length] > 0){
+        
+        UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:self.action
+                                                                         style:UIBarButtonItemStylePlain
+                                                                        target:self
+                                                                        action:@selector(UploadClicked:)];
+        self.navigationItem.rightBarButtonItem = rightBarItem;
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -59,7 +62,7 @@
     }
     else{
        
-        if([[DataController sharedController] fileExistAtDocumentPath:[NSString stringWithFormat:@"%@.jpg",_fileName]]){
+        if([[DataController sharedController] fileExistAtDocumentPath:_fileName]){
             
             [[[UIAlertView alloc] initWithTitle:@"Download File" message:@"File already downloaded" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
         }
