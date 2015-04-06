@@ -67,6 +67,7 @@
             [UIImageJPEGRepresentation(_imageToBeUploaded, 0.8) writeToFile:[[DataController sharedController] filePathWithName:_fileName] atomically:YES];
            
             [[[UIAlertView alloc] initWithTitle:@"Download File" message:@"File downloaded successfully" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+            [self.navigationController popViewControllerAnimated:YES];
 
         }
         
