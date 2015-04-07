@@ -81,7 +81,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     UploadImageController *downloadController = segue.destinationViewController;
-    [downloadController setAction:@"Download"];
+    [downloadController setAction:_identifier];
     [downloadController setImageToBeUploaded:_imageToBeDownloaded];
     [downloadController setFileName:self.selectedFileName];
 }

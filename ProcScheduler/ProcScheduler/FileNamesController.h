@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FileNamesController : UITableViewController
-
+@property (nonatomic,strong) NSString *identifier;
 @end

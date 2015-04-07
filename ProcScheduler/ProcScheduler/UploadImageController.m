@@ -60,7 +60,7 @@
         
         [self presentViewController:_alertController animated:YES completion:nil];
     }
-    else{
+    else if([btn.title isEqualToString:@"Download"]){
        
         if([[DataController sharedController] fileExistAtDocumentPath:_fileName]){
             
@@ -74,6 +74,8 @@
 
         }
         
+    }
+    else {
         
     }
 }

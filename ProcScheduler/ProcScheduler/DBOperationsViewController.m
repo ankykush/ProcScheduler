@@ -10,6 +10,8 @@
 #import "Model.h"
 #import "ServerViewController.h"
 #import "UploadImageController.h"
+#import "FileNamesController.h"
+
 @interface DBOperationsViewController ()
 @property (nonatomic,strong) UIImagePickerController *imagePicker;
 @property (nonatomic,strong) UIImage *selectedImage;
@@ -71,6 +73,9 @@
     
 }
 
+- (IBAction)dataTransfer:(id)sender {
+//    [self performSegueWithIdentifier:@"fileNames" sender:self];
+}
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
@@ -92,6 +97,14 @@
         UploadImageController *uploadController = segue.destinationViewController;
         uploadController.imageToBeUploaded = self.selectedImage;
         uploadController.action = @"Upload";
+    }
+    else if ([segue.identifier isEqualToString:@"transfer"]){
+        FileNamesController *namesController = segue.destinationViewController;
+        namesController.identifier = @"Transfer";
+    }
+    else if ([segue.identifier isEqualToString:@"fileNames"]){
+        FileNamesController *namesController = segue.destinationViewController;
+        namesController.identifier = @"Download";
     }
 }
 

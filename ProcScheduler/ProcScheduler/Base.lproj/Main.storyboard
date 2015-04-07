@@ -208,12 +208,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSU-mS-O6y">
-                                <rect key="frame" x="16" y="173" width="343" height="30"/>
-                                <state key="normal" title="DB Upload">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDT-Vl-8gZ">
                                 <rect key="frame" x="16" y="222" width="343" height="30"/>
                                 <state key="normal" title="Table Copy">
@@ -243,6 +237,10 @@
                                 <state key="normal" title="Data Transfer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dataTransfer:" destination="YbV-GK-sMF" eventType="touchUpInside" id="dJp-Ni-qT4"/>
+                                    <segue destination="4O8-zP-aFh" kind="show" identifier="transfer" id="spm-mC-pQg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-GY-aZx">
                                 <rect key="frame" x="16" y="476" width="343" height="30"/>
@@ -404,6 +402,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="p2d-kV-nXp"/>
+        <segue reference="euD-m1-VCG"/>
+        <segue reference="spm-mC-pQg"/>
     </inferredMetricsTieBreakers>
 </document>
