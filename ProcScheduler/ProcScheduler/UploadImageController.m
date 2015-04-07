@@ -92,6 +92,7 @@
         
         PFObject *imageObj = [PFObject objectWithClassName:@"Server1"];
         [imageObj setObject:imageFile forKey:@"File"];
+        [imageObj setObject:fileName forKey:@"FileName"];
         [imageObj save];
         [_activityIndicator stopAnimating];
         dispatch_async(dispatch_get_main_queue(), ^{
