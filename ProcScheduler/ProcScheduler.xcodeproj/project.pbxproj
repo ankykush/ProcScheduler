@@ -43,6 +43,8 @@
 		B0B9361F1AD20C50005654C5 /* UploadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B9361E1AD20C50005654C5 /* UploadImageController.m */; };
 		B0B936221AD234A4005654C5 /* FileNamesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B936211AD234A4005654C5 /* FileNamesController.m */; };
 		B0B936251AD23B0B005654C5 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B936241AD23B0B005654C5 /* DataController.m */; };
+		B0B936281AD253A6005654C5 /* GalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B936271AD253A6005654C5 /* GalleryController.m */; };
+		B0B9362B1AD259EC005654C5 /* GalleryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B9362A1AD259EC005654C5 /* GalleryCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,10 @@
 		B0B936211AD234A4005654C5 /* FileNamesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileNamesController.m; sourceTree = "<group>"; };
 		B0B936231AD23B0B005654C5 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		B0B936241AD23B0B005654C5 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		B0B936261AD253A6005654C5 /* GalleryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryController.h; sourceTree = "<group>"; };
+		B0B936271AD253A6005654C5 /* GalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryController.m; sourceTree = "<group>"; };
+		B0B936291AD259EC005654C5 /* GalleryCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCollectionCell.h; sourceTree = "<group>"; };
+		B0B9362A1AD259EC005654C5 /* GalleryCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,10 @@
 				B0B936211AD234A4005654C5 /* FileNamesController.m */,
 				B0B936231AD23B0B005654C5 /* DataController.h */,
 				B0B936241AD23B0B005654C5 /* DataController.m */,
+				B0B936261AD253A6005654C5 /* GalleryController.h */,
+				B0B936271AD253A6005654C5 /* GalleryController.m */,
+				B0B936291AD259EC005654C5 /* GalleryCollectionCell.h */,
+				B0B9362A1AD259EC005654C5 /* GalleryCollectionCell.m */,
 				1B75FC641AC878E700C8F567 /* Main.storyboard */,
 				1B75FC671AC878E700C8F567 /* Images.xcassets */,
 				1B75FC691AC878E700C8F567 /* LaunchScreen.xib */,
@@ -375,7 +385,9 @@
 				B0B936221AD234A4005654C5 /* FileNamesController.m in Sources */,
 				1B75FCAD1AC87FF300C8F567 /* LoginViewController.m in Sources */,
 				B0B936251AD23B0B005654C5 /* DataController.m in Sources */,
+				B0B9362B1AD259EC005654C5 /* GalleryCollectionCell.m in Sources */,
 				1B75FC601AC878E700C8F567 /* AppDelegate.m in Sources */,
+				B0B936281AD253A6005654C5 /* GalleryController.m in Sources */,
 				1B75FC5D1AC878E700C8F567 /* main.m in Sources */,
 				1B75FCB31AC8887000C8F567 /* MainMenuViewController.m in Sources */,
 				1B75FCB61AC888F400C8F567 /* ScheduleViewController.m in Sources */,
