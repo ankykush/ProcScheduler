@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="teq-TW-T2r">
-                                <rect key="frame" x="170" y="305" width="38" height="30"/>
+                                <rect key="frame" x="141" y="305" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H2I-7s-wKp">
-                                <rect key="frame" x="104" y="84" width="120" height="21"/>
+                                <rect key="frame" x="104" y="84" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX3-HF-t9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="-77.999999999999986"/>
+            <point key="canvasLocation" x="1127" y="-78"/>
         </scene>
         <!--Operations View Controller-->
         <scene sceneID="3MK-Aa-6cy">
@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vR6-Mg-ROF">
-                                <rect key="frame" x="139" y="84" width="42" height="21"/>
+                                <rect key="frame" x="97" y="84" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ra-J3-Wpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454.1333333333332" y="-77.153333333333336"/>
+            <point key="canvasLocation" x="1454" y="-78"/>
         </scene>
         <!--Upload Image Controller-->
         <scene sceneID="L9n-uX-OL5">
@@ -315,7 +315,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eP-c5-Kxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="-98"/>
+            <point key="canvasLocation" x="2140" y="-112"/>
         </scene>
         <!--File Names Controller-->
         <scene sceneID="aq7-IX-SUQ">
@@ -374,6 +374,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="spm-mC-pQg"/>
-        <segue reference="Pgg-jY-v2J"/>
+        <segue reference="p2d-kV-nXp"/>
     </inferredMetricsTieBreakers>
 </document>
