@@ -53,7 +53,7 @@
         
         _okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
             NSString *name = ((UITextField *)_alertController.textFields[0]).text;
-            [self uploadFileWithName:name];
+            [self uploadFileWithName:name toServer:[[DataController sharedController] selectedServer]];
         }];
         [_okAction setEnabled:NO];
         [_alertController addAction:_okAction];
@@ -77,10 +77,39 @@
     }
     else {
         
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Select Server" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        
+        [Model getDataFrom:@"Servers" orderBy:@"ServerName" completion:^(NSArray *responseArray, NSError *responseError, NSString *object) {
+           
+            
+            if(responseError == nil)
+            {
+                for(PFObject *serverObj in responseArray )
+                {
+                    if(![[serverObj objectForKey:@"ServerName"] isEqualToString:[[DataController sharedController] selectedServer]]){
+                        UIAlertAction *action = [UIAlertAction actionWithTitle:[serverObj objectForKey:@"ServerName"]  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                            [self transferFileToServer:action.title];
+                        }];
+                        [alertController addAction:action];
+                    }
+                }
+            }
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Cancel"  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            }];
+            [alertController addAction:action];
+
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }];
     }
 }
 
--(void)uploadFileWithName:(NSString *)fileName{
+-(void)transferFileToServer:(NSString *)toServer{
+    
+    [self uploadFileWithName:_fileName toServer:toServer];
+    
+}
+-(void)uploadFileWithName:(NSString *)fileName toServer:(NSString *)serverName{
     dispatch_queue_t bgQueue = dispatch_get_global_queue(
                                                          DISPATCH_QUEUE_PRIORITY_HIGH, 0);
 
@@ -92,7 +121,7 @@
         PFFile *imageFile = [Model createPFFileFromData:UIImageJPEGRepresentation(self.imageToBeUploaded, 0.8) withName:[NSString stringWithFormat:@"%@.jpg",fileName]];
         [imageFile save];
         
-        PFObject *imageObj = [PFObject objectWithClassName:@"Server1"];
+        PFObject *imageObj = [PFObject objectWithClassName:serverName];
         [imageObj setObject:imageFile forKey:@"File"];
         [imageObj setObject:fileName forKey:@"FileName"];
         [imageObj save];
