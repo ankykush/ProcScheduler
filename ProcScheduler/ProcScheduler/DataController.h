@@ -11,10 +11,12 @@
 @interface DataController : NSObject
 
 @property (nonatomic,strong) NSString *selectedServer;
+@property (nonatomic,strong) NSDate *scheduledDate;
 
 +(DataController *)sharedController;
 
 -(BOOL)fileExistAtDocumentPath:(NSString *)fileName;
 
 -(NSString *)filePathWithName:(NSString *)fileName;
+
 @end

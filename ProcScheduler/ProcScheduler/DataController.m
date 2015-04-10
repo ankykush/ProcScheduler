@@ -9,7 +9,7 @@
 #import "DataController.h"
 
 @implementation DataController
-
+@synthesize scheduledDate;
 static DataController *sharedInst = nil;
 
 +(DataController *)sharedController{
