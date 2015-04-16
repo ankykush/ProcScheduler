@@ -14,4 +14,5 @@
 
 -(void)fileUpload:(NSDictionary *)userInfo;
 -(void)fileDownload:(NSDictionary *)userInfo;
+-(void)dataTransfer:(NSDictionary *)userInfo;
 @end

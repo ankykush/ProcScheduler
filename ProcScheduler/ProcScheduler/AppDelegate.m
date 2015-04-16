@@ -87,6 +87,11 @@ NSString *const DATA_TRANSFER = @"DATA_TRANSFER";
         uploadController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"uploadController"];
         [uploadController fileDownload:localNotif.userInfo];
     }
+    else if ([localNotif.alertTitle isEqualToString:DATA_TRANSFER]) {
+        
+        uploadController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"uploadController"];
+        [uploadController dataTransfer:localNotif.userInfo];
+    }
 }
 
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {

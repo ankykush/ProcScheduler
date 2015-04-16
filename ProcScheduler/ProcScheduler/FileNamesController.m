@@ -84,6 +84,20 @@
     [downloadController setAction:_identifier];
     [downloadController setImageToBeUploaded:_imageToBeDownloaded];
     [downloadController setFileName:self.selectedFileName];
+    if([segue.identifier isEqualToString:@"downloadImage"])
+    {
+        [self storeFileAtTempDirectoryWithName:self.selectedFileName];
+    }
+}
+
+-(void)storeFileAtTempDirectoryWithName:(NSString *)fileName
+{
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *storePath = [docDir stringByAppendingPathComponent:[NSString stringWithFormat:@"temp/%@",fileName]];
+    
+    [[NSFileManager defaultManager]createDirectoryAtPath:[storePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    [UIImageJPEGRepresentation(_imageToBeDownloaded, 0.8) writeToFile:storePath atomically:YES];
 }
 
 
